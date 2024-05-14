@@ -6,7 +6,6 @@
   color: #030712;
 }
 body {
-  height: 100vh;
   background-image: url("planets.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,6 +15,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
 button {
@@ -29,8 +29,8 @@ button {
 
 .login-container {
   background: rgba(255, 255, 255, 0.85);
-  width: 350px;
-  padding: 20px;
+  width: 300px;
+  padding: 30px;
   border-radius: 5px;
   color: #030712;
 }
@@ -48,15 +48,13 @@ input {
   background: #fff;
   border: 2px solid rgb(34, 52, 59, 10%);
   border-radius: 4px;
-  height: 30px;
+  height: 32px;
   width: 100%;
-  margin: 10px 0;
-  text-align: center;
+  margin-block: 10px;
+  padding-left: 40px;
+  outline-color: rgb(152, 222, 255);
 }
 
-.login-container {
-  width: 350px;
-}
 .input-icon {
   position: relative;
 }
@@ -104,23 +102,49 @@ input {
 #troubleshoot {
   display: flex;
   font-size: 12px;
-  gap: 5px;
   align-items: center;
   justify-content: space-between;
-  align-items: center;
 }
 
 #troubleshoot input {
   width: 18px;
   height: 18px;
 }
-/* #troubleshoot:last-child {
-  margin-left: auto;
-} */
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
 
 footer {
-  margin-top: 300px;
-  font-size: 24px;
+  font-size: 16px;
   text-align: center;
-  display: space-around;
+  margin-top: 30px;
+  font-weight: bold;
+}
+footer a {
+  text-decoration: none;
+  margin-left: 10px;
+}
+/* dark mode css */
+.dark-mode {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 9)),
+    url("planets.jpg");
+}
+
+.dark-mode footer a {
+  color: #ffffff;
+}
+.dark-mode .login-container {
+  box-shadow: 0px 0px 3px 3px rgb(241, 241, 241);
+}
+.dark-mode .icon {
+  color: #030712;
+}
+.dark-mode #login {
+  background-color: #030712;
+  color: #d3d3d3;
+}
+.dark-mode input {
+  outline-color: #030712;
 }
